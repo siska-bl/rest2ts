@@ -81,11 +81,34 @@
             "$ref": "#/components/schemas/Pet"
           },
           {
-            "properties": {
-              "meow": {
-                "type": "boolean"
+            "allOf": [
+              {
+                "allOf": [
+                  {
+                    "allOf": [
+                      {
+                        "properties": {
+                          "eat": {
+                            "type": "boolean"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "properties": {
+                  "meow": {
+                    "type": "boolean"
+                  }
+                },
+                "type": "object"
               }
-            },
+            ],
             "type": "object"
           }
         ]

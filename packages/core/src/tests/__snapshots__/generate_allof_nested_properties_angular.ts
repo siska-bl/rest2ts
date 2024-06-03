@@ -268,6 +268,7 @@ export type Dog = {
 
 export type Cat = {
 	discriminator: string;
+	eat: boolean;
 	meow: boolean;
 };
 
